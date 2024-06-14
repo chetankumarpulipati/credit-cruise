@@ -1,0 +1,67 @@
+/* Navbar.css */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-bar-container {
+  position: absolute;
+  right: 20px;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  background-color: #333;
+  display: none;
+  z-index: 1000;
+  width: 0; /* Initially set width to 0 */
+  right: 0;
+  overflow: hidden; /* Hide any overflow content */
+  transform-origin: top right; /* Set the transform origin to the top right corner */
+  transition: width 0.3s ease; /* Add transition for smooth animation */
+}
+
+.nav-links:hover .dropdown-menu {
+  display: block;
+  width: 150px; /* Expand the width towards the left */
+  right: 100%; /* Move the menu to the left */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
